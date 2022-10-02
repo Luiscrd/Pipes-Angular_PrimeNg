@@ -3,6 +3,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { ImageModule } from 'primeng/image';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     MenuComponent
   ],
   imports: [
-    PrimeNgModule
+    PrimeNgModule,
+    ImageModule
   ]
 })
 export class SharedModule { }
