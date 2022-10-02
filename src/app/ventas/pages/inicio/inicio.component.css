@@ -1,0 +1,93 @@
+.box-basic{
+  padding: 10px 20px;
+}
+
+/* table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 0 0 3px 3px;
+  border-spacing: 0;
+  margin: 12px 0 32px;
+}
+
+table {
+  margin: 24px 0;
+  border-radius: 0 0 3px 3px;
+}
+
+table {
+  box-shadow: 0 2px 2px #6e6e6e3d,0 0 2px #0a10141f;
+  background-color: #fff;
+}
+
+.api-body table {
+  margin: 12px 0 24px;
+}
+
+table.is-full-width {
+  width: 100%;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+table thead {
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+table thead>tr {
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.api-body table tr:last-child {
+  border-bottom: none;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+}
+
+th {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 13px 32px;
+  text-align: left;
+}
+
+table thead>tr>th {
+  background: #1E1E1E;
+  border-bottom: 1px solid #DBDBDB;
+  color: white;
+  border-radius: 3px 3px 0 0;
+}
+
+.api-body table th {
+  text-transform: none;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+ */

@@ -1,0 +1,31 @@
+.footer{
+  width: 100%;
+  position: relative;
+  background-color: #96989a;
+  color: #3E4141;
+  padding: 20px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.by-footer{
+  position: relative;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.logo-liked{
+  height: 30px;
+  transition: 0.5s;
+}
+
+.logo-liked:hover{
+  opacity: 0.5;
+}
+
+.box-logos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,35 @@
+<div class="box-basic">
+  <hr>
+  <h1>Pipes en Angular</h1>
+  <p>Los pipes nos ayudan a dar formato a ciertos datos en Angualar <a
+      href="https://angular.io/api/common/CommonModule#pipes" target="_blank">Más Información</a></p>
+  <hr>
+  <div class="grid">
+    <div class="col">
+      <p-table [value]="pipes">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-pipe>
+          <tr>
+            <td>
+              <a [href]="pipe.link">
+                <span class="typ">{{ pipe.name }}</span>
+              </a>
+            </td>
+            <td>
+              <p>{{ pipe.descrip }}</p>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+  <hr>
+  <p>Más información sobre el elementos ' Table ' mostrados en la pagina <a href="http://primefaces.org/primeng/table"
+    target="_blank">Más Información</a></p>
+
+</div>

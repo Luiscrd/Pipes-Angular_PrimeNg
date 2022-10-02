@@ -1,0 +1,133 @@
+<div class="box-basic">
+  <hr>
+  <h1>Pipes personaliados</h1>
+  <p>Pipes creados y personalizados por nosotros <a href="https://angular.io/api/common/DecimalPipe" target="_blank">Más
+      Información</a></p>
+  <hr>
+  <div class="grid">
+    <div class="col-4">
+      <p-card header="AlterMayus">
+        <p [style]="{ 'text-align' : 'center' }">Pipe creado para alternar una mayuscula sí y una no.</p>
+        <p [style]="{ 'text-align' : 'center' }">Se coloca el caracter ' | ' seguido del comando ' altermayus ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploAlter }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para lograr el siguiente resultado :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ texto | altermayus:alterMayusAct }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <button pButton type="button" (click)="probarAlter()" icon="pi pi-sync" label="Probar"
+            class="p-button-info mt-2"></button>
+        </p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <button pButton type="button" (click)="showUper()" icon="pi pi-cog" label="Ver funcionamiento"
+            class="p-button-warning mt-2"></button>
+        </p>
+      </p-card>
+    </div>
+    <p-dialog header="AlterMayus" [(visible)]="displayMayus">
+      <pre [style]="{'display': 'flex','justify-content': 'center'}">{{ funUprer }}</pre>
+    </p-dialog>
+    <div class="col-4">
+      <p-card header="VolText">
+        <p [style]="{ 'text-align' : 'center' }">Pipe creado para dar la vuelta a un texto.</p>
+        <p [style]="{ 'text-align' : 'center' }">Se coloca el caracter ' | ' seguido del comando ' voltext ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploVolt }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para lograr el siguiente resultado :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ texto | voltext:volTextAct }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <button pButton type="button" (click)="probarVol()" icon="pi pi-sync" label="Probar"
+            class="p-button-info mt-2"></button>
+        </p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <button pButton type="button" (click)="showVol()" icon="pi pi-cog" label="Ver funcionamiento"
+            class="p-button-warning mt-2"></button>
+        </p>
+      </p-card>
+    </div>
+    <p-dialog header="VolText" [(visible)]="displayVol">
+      <pre [style]="{'display': 'flex','justify-content': 'center'}">{{ funVol }}</pre>
+    </p-dialog>
+    <div class="col-4">
+      <p-card header="CamelCase">
+        <p [style]="{ 'text-align' : 'center' }">Pipe creado para tranformar texto en formato camelcase.</p>
+        <p [style]="{ 'text-align' : 'center' }">Se coloca el caracter ' | ' seguido del comando ' camelcase ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploCamel }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para lograr el siguiente resultado :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ texto | camelcase:camelAct }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <button pButton type="button" (click)="probarCamel()" icon="pi pi-sync" label="Probar"
+            class="p-button-info mt-2"></button>
+        </p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <button pButton type="button" (click)="showCamel()" icon="pi pi-cog" label="Ver funcionamiento"
+            class="p-button-warning mt-2"></button>
+        </p>
+      </p-card>
+    </div>
+    <p-dialog header="CamelCase" [(visible)]="displayCamel">
+      <pre [style]="{'display': 'flex','justify-content': 'center'}">{{ funCame }}</pre>
+    </p-dialog>
+  </div>
+  <hr>
+  <h1>Efectos tabla</h1>
+  <p>Ordenar la tabla por diferentes factores y Realizar efectos usando los pipes, para hacerlo automatico con PrimeNg pulsa <a href="http://primefaces.org/primeng/table/sort"
+    target="_blank">Más Información</a></p>
+  <hr>
+  <p-toolbar>
+    <div class="p-toolbar-group-left">
+      <button pButton type="button" (click)="ordenarPorId()"
+        [icon]="iconoPorId ? 'pi pi-sort-numeric-down' : 'pi pi-sort-numeric-up-alt'"
+        class="p-button-rounded p-button-info"></button>
+        <button pButton type="button" (click)="mostrarInfoTabla()" icon="pi pi-cog" label="Ver funcionamiento"
+        class="p-button-success ml-4"></button>
+    </div>
+    <div class="p-toolbar-group-right">
+      <button pButton type="button" (click)="ponerMayusNombres()" icon="pi pi-reply" label="Togle Mayusculas"
+        class="p-button-warning mr-2"></button>
+      <p-button [icon]="iconoPorNombre ? 'pi pi-sort-alpha-down' : 'pi pi-sort-alpha-up-alt'" label="Por nombre"
+        (onClick)="ordenarPorNombre()" class="mr-2"></p-button>
+      <p-button [icon]="iconoPorValor ? 'pi pi-sort-amount-down' : 'pi pi-sort-amount-up-alt'" label="Por valore"
+        (onClick)="ordenarPorValor()" class="mr-2"></p-button>
+      <p-button [icon]="iconoPorNumero ? 'pi pi-sort-numeric-down' : 'pi pi-sort-numeric-up-alt'" label="Por color"
+        (onClick)="ordenarPorNumero()" class="mr-2"></p-button>
+    </div>
+  </p-toolbar>
+  <p-table responsiveLayout="scroll" [value]="personas | ordenar:ordernarPor:ordenar | mayustab:mayusNombres">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Id</th>
+        <th [style]="{ 'text-align' : 'center' }">Nombre</th>
+        <th [style]="{ 'text-align' : 'center' }">Activo</th>
+        <th [style]="{ 'text-align' : 'center' }">Color</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-persona>
+      <tr>
+        <td>{{ persona.id }}</td>
+        <td [style]="{ 'text-align' : 'center' }">{{ persona.nombre }}</td>
+        <td [style]="{ 'text-align' : 'center' }">{{ persona.activo | active | titlecase }}</td>
+        <td [style]="{ 'text-align' : 'center' }">{{ persona.color }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-dialog header="OrdenarTabla" [(visible)]="displayTabla">
+    <pre [style]="{'display': 'flex','justify-content': 'center'}">{{ codigoTabla }}</pre>
+  </p-dialog>
+  <hr>
+  <p>Más información sobre los elementos mostrado en la pagina
+    <a href="http://primefaces.org/primeng/card" class="mr-2" target="_blank">Card</a>
+    <a href="http://primefaces.org/primeng/dialog" class="mr-2" target="_blank">Dialog</a>
+    <a href="http://primefaces.org/primeng/toolbar" class="mr-2" target="_blank">Tolbar</a>
+    <a href="http://primefaces.org/primeng/table/basic" class="mr-2" target="_blank">Table</a>
+  </p>
+</div>

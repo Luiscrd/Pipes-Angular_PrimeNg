@@ -1,0 +1,79 @@
+<div class="box-basic">
+  <hr>
+  <h1>DecimalPipe</h1>
+  <p>Pipes incluidos en Angular - Para manejar decimales y monedas <a href="https://angular.io/api/common/DecimalPipe"
+      target="_blank">Más Información</a></p>
+  <hr>
+  <div class="grid">
+    <div class="col-4">
+      <p-card header="Decimal Pipe">
+        <p [style]="{ 'text-align' : 'center' }">Se coloca el caracter ' | ' seguido del comando ' number ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploNumero }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para que coloque puntos al numero :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ ventasNetas | number }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+    <div class="col-4">
+      <p-card header="Formato Decimal">
+        <p [style]="{ 'text-align' : 'center' }">Se coloca " '1.2-2' " seguido de ' : ' y el comando ' number ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploNumeroDecimal }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para que muestre solo 2 decimales :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ ventasNetas | number:'1.2-2' }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+    <div class="col-4">
+      <p-card header="Formato Moneda">
+        <p [style]="{ 'text-align' : 'center' }">Se coloca ' € ' seguido de ' : ' y el comando ' currency ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploNumeroMoneda }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para que lo muestre como moneda :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ ventasNetas | currency:'€' }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+  </div>
+  <hr>
+  <h1>PercentPipe</h1>
+  <p>Pipes incluidos en Angular - Para manejar porcentajes <a href="https://angular.io/api/common/PercentPipe"
+      target="_blank">Más Información</a></p>
+  <hr>
+  <div class="grid">
+    <div class="col-6">
+      <p-card header="Percent Pipe">
+        <p [style]="{ 'text-align' : 'center' }">Se coloca el caracter ' | ' seguido del comando ' percent ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploNumeroPorcentaje }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para darle un formato de porcentaje redondeandolo :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ porcentaje | percent }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+    <div class="col-6">
+      <p-card header="Formato Percent">
+        <p [style]="{ 'text-align' : 'center' }">Se coloca " '1.2-2' " seguido de ' : ' y el comando ' percent ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploNumeroPorcentaje2 }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para que muestre los 2 decimales sin hacer redondeo :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ porcentaje | percent:'1.2-2' }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+  </div>
+  <hr>
+  <p>Más información sobre los elementos ' Card ' mostrados en la pagina <a href="http://primefaces.org/primeng/card"
+    target="_blank">Más Información</a></p>
+</div>

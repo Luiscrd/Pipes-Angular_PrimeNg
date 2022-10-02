@@ -1,0 +1,81 @@
+<div class="box-basic">
+  <hr>
+  <h1>Pipes Básicos</h1>
+  <p>Pipes incluidos en Angular - Usualmente en el Common Module <a href="https://angular.io/api/common/UpperCasePipe" target="_blank">Más Información</a></p>
+  <hr>
+  <div class="grid">
+    <div class="col-4">
+      <p-card header="UpperCase">
+        <p [style]="{ 'text-align' : 'center' }">Se coloca el caracter ' | ' seguido del comando ' uppercase ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploUpper }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para lograr el siguiente resultado :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ texto | uppercase }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+    <div class="col-4">
+      <p-card header="LowerCase">
+        <p [style]="{ 'text-align' : 'center' }">Se coloca el caracter ' | ' seguido del comando ' lowercase ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploLower }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para lograr el siguiente resultado :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ texto | lowercase }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+    <div class="col-4">
+      <p-card header="TitleCase">
+        <p [style]="{ 'text-align' : 'center' }">Se coloca el caracter ' | ' seguido del comando ' titlecase ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploTitle }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Para lograr el siguiente resultado :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ texto | titlecase }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+  </div>
+  <hr>
+  <h1>Pipes Fechas</h1>
+  <p>Pipes incluidos en Angular - Para manejar el formato de la fecha <a href="https://angular.io/api/common/DatePipe" target="_blank">Más Información</a></p>
+  <hr>
+  <div class="grid">
+    <div class="col-6">
+      <p-card header="Date">
+        <p [style]="{ 'text-align' : 'center' }">Se coloca la fecha recibida de un ' new Date ' seguido de ' | ' y por ultimo escribimos el comando ' date ' :</p>
+        <p [style]="{ 'text-align' : 'center' }">{{ ejemploDate }}</p>
+        <p [style]="{ 'text-align' : 'center' }">Con lo que conviete ' {{ fecha }} ' en el formato siguiente:</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ fecha | date }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+    <div class="col-6">
+      <p-card header="Formateo">
+        <p [style]="{ 'text-align' : 'center' }">Para formatear la fecha a nuestro gusto podemos utilizar por ejemplo " date:'short' "<i [style]="{ 'margin' : '0 10px' }" class="pi pi-arrow-right"></i>{{ ejemploDateSort }} :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ fecha | date:'short' }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+        <p [style]="{ 'text-align' : 'center' }">O bien utilizamos " 'dd / MM / yyyy, hh:mm a' " en formato manual <i [style]="{ 'margin' : '0 10px' }" class="pi pi-arrow-right"></i>{{ ejemploDateSort2 }} :</p>
+        <p [style]="{ 'text-align' : 'center' }">
+          <i [style]="{ 'margin-right' : '20px' }" class="pi pi-arrow-right"></i>
+          {{ fecha | date:'dd / MM / yyyy, hh:mm a' }}
+          <i [style]="{ 'margin-left' : '20px' }" class="pi pi-arrow-left"></i>
+        </p>
+      </p-card>
+    </div>
+  </div>
+  <hr>
+  <p>Más información sobre los elementos ' Card ' mostrados en la pagina <a href="http://primefaces.org/primeng/card"
+    target="_blank">Más Información</a></p>
+</div>
